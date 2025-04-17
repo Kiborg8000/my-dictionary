@@ -1,0 +1,106 @@
+/* Основной стиль */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(-45deg, #4a90e2, #8e44ad, #1abc9c, #f39c12);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  header {
+    width: 100%;
+    background-color: #4a90e2;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .container {
+    margin-top: 2rem;
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #4a90e2;
+    outline: none;
+  }
+  
+  button {
+    padding: 0.8rem 1.2rem;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #3a7dd8;
+  }
+  
+  .result {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  /* Мобильная адаптация */
+  @media screen and (max-width: 600px) {
+    header {
+      font-size: 1.2rem; /* Уменьшаем размер шрифта в заголовке */
+      padding: 0.8rem; /* Уменьшаем отступы */
+    }
+  
+    .container {
+      padding: 1.5rem;
+      width: 90%; /* Сжимаем контейнер */
+      max-width: 90%; /* Меньше ограничение на ширину */
+    }
+  
+    input[type="text"], button {
+      padding: 0.6rem; /* Уменьшаем кнопки и поле ввода */
+      font-size: 0.9rem; /* Меньше шрифт */
+    }
+  
+    .result {
+      font-size: 1rem; /* Уменьшаем шрифт результата */
+      margin-top: 1rem;
+    }
+  }  
